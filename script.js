@@ -1,0 +1,3 @@
+let count=0;const countEl=document.getElementById('count');const notice=document.getElementById('notice');let timer;
+    document.querySelectorAll('.add').forEach(button=>button.addEventListener('click',()=>{countEl.textContent=++count;notice.textContent=button.dataset.name+' đã được thêm vào túi hàng';notice.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>notice.classList.remove('show'),2200)}));
+    document.getElementById('signup').addEventListener('submit',event=>{event.preventDefault();notice.textContent='Cảm ơn bạn đã đăng ký!';notice.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>notice.classList.remove('show'),2500);event.target.reset()});
